@@ -6,7 +6,7 @@
         public function __construct(){
             $this->config = Config::singleton();
 
-            if(!isset(self::$instance)){
+            if(!self::$instance){
                 try{
                     parrent::__construct("mysql:
                                             host={$this->config->get('dbhost')}; dbname={$this->config->get('dbname')}; charset={$this->config->get('charset')}",
