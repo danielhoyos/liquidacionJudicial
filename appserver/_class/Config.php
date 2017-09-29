@@ -25,5 +25,9 @@ class Config{
         }
         return self::$instance;
     }
+
+    private function __clone(){
+        trigger_error("La clonación no esta permitida", E_USER_ERROR);
+    }
 }
 ?>
